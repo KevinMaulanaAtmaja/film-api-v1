@@ -1,0 +1,5 @@
+# Nama file .gitignore
+# Node modules
+node_modules/
+# Env Variables
+.env
