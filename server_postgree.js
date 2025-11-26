@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./database_postgree.js');
-const bycrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { authenticateToken, authorizeRole } = require('./middleware/auth.js');
 
@@ -190,6 +190,7 @@ app.delete('/movies/:id', [authenticateToken, authorizeRole('admin')], async (re
 
 
 // director routes
+
 
 // fallback & error handling
 app.use((req, res) => {
